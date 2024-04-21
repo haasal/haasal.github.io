@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+    />
+    <title>Newsletter</title>
+</head>
+<body>
+<svg
+        id="flag"
+        xmlns="http://www.w3.org/2000/svg"
+        width="359"
+        height="359"
+        fill="none"
+        viewBox="0 0 359 359"
+>
+    <path
+            fill="#393"
+            d="M35.748 341.322 341.22 35.852l17.677 17.678L53.426 359l-17.678-17.678Z"
+    />
+    <path
+            fill="#fff"
+            d="M18 323.47 323.47 18l17.678 17.678-305.47 305.47L18 323.47Z"
+    />
+    <path
+            fill="#F10818"
+            d="M0 305.47 305.47 0l17.678 17.678-305.47 305.47L0 305.47Z"
+    />
+</svg>
+
+<h1>Der Wikingerboøte</h1>
+
+<main>
+    <div id="important">
+        <h2>Wichtiges vorab!</h2>
+        <ul>
+                <li>
+                        <h3>Wichtiger punkt 1</h3>
+                        
+
+                        <p>Text text text nummer 1</p>
+                        
+
+                        <p>Weiterer text</p>
+                        
+
+                </li>
+                <li>
+                        <h3>Wichtiger punkt 2</h3>
+                        
+
+                        <p>Noch mehr wichtige punkte</p>
+                        
+
+                </li>
+        </ul>
+    </div>
+
+    <ul id="articles">
+            <li>
+                    <h2>Interview mit<br/><strong>Vorstand</strong></h2>
+                    
+
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet.</p>
+                    
+
+                    <p><img alt="placeholder" src="https://placehold.co/300x300"/></p>
+                    
+
+            </li>
+            <li>
+                    <h2>Das <strong>Bier</strong><br/>des <strong>Monats</strong></h2>
+                    
+
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet.</p>
+                    
+
+                    <p><img alt="placeholder" src="https://placehold.co/600x400"/></p>
+                    
+
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+amet.</p>
+                    
+
+            </li>
+    </ul>
+</main>
+</body>
+
+<style>
+    /* Remove default styles */
+    h1,
+    h2,
+    h3,
+    p,
+    li,
+    ul {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+        list-style: none;
+    }
+
+    body,
+    html {
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
+        width: 100vw;
+        color: var(--text-color);
+    }
+
+    :root {
+        --text-color: #0a2752;
+        --important-color: #c2101c;
+    }
+
+    #flag {
+        position: absolute;
+        left: -90px;
+        top: -90px;
+        z-index: -1;
+    }
+
+    main {
+        padding: 0 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    h1 {
+        background: rgb(255 255 255 / 90%);
+        /* backdrop-filter: blur(10px); */
+        font-weight: 500;
+        font-size: 32px;
+        text-align: center;
+        padding: 1rem 0 1rem 0;
+        margin: 2rem 0 1rem 0;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 0.125rem;
+    }
+
+    #important {
+        h2 {
+            color: var(--important-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.5rem;
+        }
+
+        border: solid var(--text-color);
+        border-radius: 0.5rem;
+        background-color: white;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1); /* Stolen from tailwindcss: shadow-lg */
+        margin: 1rem 0 1.5rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #articles {
+        li:after {
+            text-align: center;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+            display: block;
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='304' height='19' fill='none' viewBox='0 0 304 19'%3E%3Cpath stroke='%230A2752' stroke-width='5' d='M2 9.5c9-8.667 21-8.667 30 0s21 8.667 30 0 21-8.667 30 0 21 8.667 30 0 21-8.667 30 0 21 8.667 30 0 21-8.667 30 0 21 8.667 30 0 21-8.667 30 0 21 8.667 30 0'/%3E%3C/svg%3E%0A");
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 1rem;
+
+            img {
+                object-fit: contain;
+                max-width: max-content;
+                width: 100%;
+            }
+        }
+
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+</html>
