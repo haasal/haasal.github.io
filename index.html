@@ -80,6 +80,17 @@ amet.</p>
 
             </li>
             <li>
+                    <h2><br/>Ganz toller <strong>Artikel</strong></h2>
+                    
+
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+elitr.</p>
+                    
+
+            </li>
+            <li>
                     <h2>Das <strong>Bier</strong><br/>des <strong>Monats</strong></h2>
                     
 
@@ -100,6 +111,28 @@ gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum d
 elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
 accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
 amet.</p>
+                    
+
+            </li>
+            <li>
+                    <h2>Noch ein ganz, ganz<br/>toller <strong>Artikel</strong></h2>
+                    
+
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+elitr.</p>
+                    
+
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+elitr.</p>
+                    
+
+                    <p>magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+elitr.</p>
                     
 
             </li>
@@ -228,6 +261,56 @@ amet.</p>
 
         display: flex;
         flex-direction: column;
+    }
+
+    /* mobile screen */
+    @media (min-width: 640px) {
+        #important {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem;
+            width: 500px;
+        }
+
+        body {
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        #articles {
+            li {
+                max-width: 500px;
+                height: fit-content;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-self: center;
+        }
+    }
+
+    /* big screen */
+    @media (min-width: 1280px) {
+        #articles {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 </style>
 </html>
