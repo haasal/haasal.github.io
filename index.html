@@ -267,6 +267,10 @@ elitr.</p>
         }
     }
 
+    #articles > li,.grid-sizer {
+        width: 100%;
+    }
+
     /* mobile screen */
     @media (min-width: 640px) {
         #articles {
@@ -297,15 +301,13 @@ elitr.</p>
         }
 
         #articles > li {
-            width: 50%;
             padding: 1rem;
-
             &:after {
                 display: none;
             }
         }
 
-        .grid-sizer {
+        #articles > li,.grid-sizer {
             width: 50%;
         }
     }
