@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
@@ -63,7 +64,8 @@
     </div>
 
     <ul id="articles">
-            <li>
+        <div class="grid-sizer"></div>
+            <li class="article">
                     <h2>Interview mit<br/><strong>Vorstand</strong></h2>
                     
 
@@ -79,7 +81,7 @@ amet.</p>
                     
 
             </li>
-            <li>
+            <li class="article">
                     <h2><br/>Ganz toller <strong>Artikel</strong></h2>
                     
 
@@ -90,7 +92,7 @@ elitr.</p>
                     
 
             </li>
-            <li>
+            <li class="article">
                     <h2>Das <strong>Bier</strong><br/>des <strong>Monats</strong></h2>
                     
 
@@ -114,7 +116,7 @@ amet.</p>
                     
 
             </li>
-            <li>
+            <li class="article">
                     <h2>Noch ein ganz, ganz<br/>toller <strong>Artikel</strong></h2>
                     
 
@@ -216,7 +218,7 @@ elitr.</p>
             text-align: center;
         }
 
-        ul {
+        & > ul {
             display: flex;
             flex-direction: column;
             row-gap: 0.5rem;
@@ -234,7 +236,10 @@ elitr.</p>
     }
 
     #articles {
-        li:after {
+        width: 100%;
+        align-self: center;
+
+        & > li:after {
             text-align: center;
             margin-bottom: 1rem;
             margin-top: 1.5rem;
@@ -246,7 +251,9 @@ elitr.</p>
             text-align: center;
         }
 
-        li {
+        & > li {
+            box-sizing: border-box;
+
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -258,13 +265,14 @@ elitr.</p>
                 width: 100%;
             }
         }
-
-        display: flex;
-        flex-direction: column;
     }
 
     /* mobile screen */
     @media (min-width: 640px) {
+        #articles {
+            max-width: 1000px;
+        }
+
         #important {
             margin-left: auto;
             margin-right: auto;
@@ -288,29 +296,37 @@ elitr.</p>
             font-size: 20px;
         }
 
-        #articles {
-            li {
-                max-width: 500px;
-                height: fit-content;
+        #articles > li {
+            width: 50%;
+            padding: 1rem;
 
-                &:after {
-                    display: none;
-                }
+            &:after {
+                display: none;
             }
+        }
 
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 2rem;
-            align-self: center;
+        .grid-sizer {
+            width: 50%;
         }
     }
 
-    /* big screen */
     @media (min-width: 1280px) {
         #articles {
-            grid-template-columns: 1fr 1fr 1fr;
+            max-width: 1500px;
+        }
+
+        #articles > li, .grid-sizer {
+            width: 33%;
         }
     }
 </style>
+
+<script>
+    let masonry = new Masonry("#articles", {
+        itemSelector: "#articles>li",
+        columnWidth: ".grid-sizer",
+        percentPosition: true
+    })
+</script>
+
 </html>
